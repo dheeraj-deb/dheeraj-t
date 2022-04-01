@@ -669,10 +669,10 @@ $(function() {
     $("#email").keyup(function (){
       if(validateEmail()){
         $("#email").css("border","2px solid green");
-        $("#emailMsg").html("<p class = 'text-success'>Valid</p>")
+        $("#emailMsg").html("<p class = 'text-success'></p>")
       }else{
         $("#email").css("border", "2px solid red");
-        $("#emailMsg").html("<p class = 'text-danger'>In-valid</p>");
+        $("#emailMsg").html("<p class = 'text-danger'>In-valid Email</p>");
       }
     })
     
