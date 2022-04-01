@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <title>Dheeraj</title>
+  
 </head>
 
 <body>
@@ -408,28 +409,39 @@
                     </div>
                     <!-- section title end -->
 
+                    
+
                     <!-- contact form frame -->
                     <div class="art-a art-card">
 
                       <!-- contact form -->
                       <form class="art-contact-form" action="https://formspree.io/f/mdoblone" method="post">
+
                         <div class="art-form-field">
-                          <input id="name" name="name" class="art-input" type="text" placeholder="Name" required>
+                         <div>
+                          <input id="name" name="name" class="art-input required" type="text" placeholder="Name">
                           <label for="name"><i class="fas fa-user"></i></label>
+                         </div>
                         </div>
+
                         <div class="art-form-field">
-                          <input id="email" name="email" class="art-input" type="email" placeholder="Email" required>
+                          <input id="email" name="email" class="art-input required" type="email" placeholder="Email">
                           <label for="email"><i class="fas fa-at"></i></label>
+                          <span id="emailMsg"></span>
                         </div>
+
                         <div class="art-form-field">
-                          <textarea id="message" name="text" class="art-input" placeholder="Message"
-                            required></textarea>
+                          <div>
+                            <textarea id="message" name="text" class="art-input required" placeholder="Message"></textarea>
                           <label for="message"><i class="far fa-envelope"></i></label>
+                          </div>
                         </div>
+
                         <div class="art-submit-frame">
-                          <button class="art-btn art-btn-md art-submit" type="submit"><span>Send message</span></button>
+                          <button class="art-btn art-btn1 art-btn-md art-submit" type="submit"><span>Send message</span></button>
                           <div class="art-success">Success <i class="fas fa-check"></i></div>
                         </div>
+
                       </form>
                       <!-- contact form end -->
 
@@ -556,6 +568,7 @@
   <script src="js/plugins/fancybox.min.js"></script>
   <!-- swup js -->
   <script src="js/plugins/swup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- main js -->
   <script src="js/main.js"></script>

@@ -2018,10 +2018,10 @@ content
   border-left: solid 50px #20202a;
 }
 .art-form-field textarea.art-active {
-  border-color: #FFC107;
+  /* border-color: #FFC107; */
 }
 .art-form-field textarea:focus {
-  border-color: #FFC107;
+  /* border-color: #FFC107; */
 }
 
 .art-contact-form .art-input:focus {
@@ -2030,7 +2030,7 @@ content
 
 .art-contact-form .art-input.art-active + label,
 .art-contact-form .art-input:focus + label {
-  background: #FFC107;
+  /* background: #FFC107; */
   color: #20202a;
 }
 
@@ -2817,6 +2817,18 @@ html.is-animating .fade-left {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.text-danger,.text-success{
+  font-size: 13px !important;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.error{
+  color: red !important;
+  width: 100% !important;
+  background:none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

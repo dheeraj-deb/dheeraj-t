@@ -243,17 +243,17 @@ $(function() {
   bar.animate(.0);
 
   // Contact form
-  function sentEmail(){
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "dheerajknight81@gmail.com",
-        Password: "OPUWqp@5013",
-        To: "dheerajt9539@gmail.com",
-        From: document.getElementById("email").value,
-        Subject: "New Contact Form Enquiry",
-        Body: "And this is the body",
-      }).then((message) => alert(message));
-  }
+  // function sentEmail(){
+  //     Email.send({
+  //       Host: "smtp.gmail.com",
+  //       Username: "dheerajknight81@gmail.com",
+  //       Password: "",
+  //       To: "dheerajt9539@gmail.com",
+  //       From: document.getElementById("email").value,
+  //       Subject: "New Contact Form Enquiry",
+  //       Body: "And this is the body",
+  //     }).then((message) => alert(message));
+  // }
 
   // portfolio filter
   $('.art-filter a').on('click', function() {
@@ -662,5 +662,50 @@ $(function() {
     });
 
   })
+
+  // form validation
+  $(document).ready(function(){
+    $(".art-btn1").hide()
+    $("#email").keyup(function (){
+      if(validateEmail()){
+        $("#email").css("border","2px solid green");
+        $("#emailMsg").html("<p class = 'text-success'>Valid</p>")
+      }else{
+        $("#email").css("border", "2px solid red");
+        $("#emailMsg").html("<p class = 'text-danger'>In-valid</p>");
+      }
+    })
+    
+  })
+  
+  jQuery(".art-contact-form").validate({
+    rules: {
+      name: "required",
+      text: "required"
+    },
+    messages: {
+      name: "Please enter your name",
+      text: "Please enter your message"
+    },
+  });
+  
+  function buttonState(){
+    if(validateEmail){
+      $(".art-btn").show();
+    }else{
+      $(".art-btn").hide();
+    }
+  }
+  function validateEmail(){
+    let email = $("#email").val()
+    let reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+    if(reg.test(email)){
+      buttonState()
+      return true;
+    }else{
+      return false;
+    }
+  }
+
 
 });
